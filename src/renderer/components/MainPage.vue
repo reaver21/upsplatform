@@ -5,7 +5,9 @@
       <div class="body-left">
         <el-button type='success'>默认按钮</el-button> 
       </div>
-      <div class="body-content"></div>
+      <div class="body-content">   
+        <ProcessStepTable></ProcessStepTable>
+      </div>
     </div>
   </div>
 </template>
@@ -13,11 +15,12 @@
 <script>
   import AppHeader from './MainPage/AppHeader.vue'
   import MainSideMenu from './MainPage/MainSideMenu.vue'
+  import ProcessStepTable from './TextModels/ProcessStepTable.vue'
 
   export default {
     name: 'MainPage',
     components: {
-      AppHeader, MainSideMenu
+      AppHeader, MainSideMenu, ProcessStepTable
     }
   }
 </script>
@@ -63,5 +66,6 @@
     display: flex;
     flex-grow: 1;
     border-left: 1px solid #ddd;
+    overflow-x: auto;
   }
 </style>
